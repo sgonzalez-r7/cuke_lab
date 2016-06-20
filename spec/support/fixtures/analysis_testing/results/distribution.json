@@ -1,0 +1,38 @@
+[
+  {
+    "failure": {
+      "feature": "/Users/sgonzalez/rapid7/pro/ui/features/sessions/session_collect.feature",
+      "scenario": "Scenario: Collect Data from a Session",
+      "step": "When I click on the first Active Session link",
+      "error_message": "Unable to find css \"#active_sessions\" (Capybara::ElementNotFound)"
+    },
+    "n": 5
+  },
+  {
+    "failure": {
+      "feature": "/Users/sgonzalez/rapid7/pro/ui/features/sessions/session_collect.feature",
+      "scenario": "Scenario: Collect Data from a Session",
+      "step": "When I click the \"Collect System Data\" button to submit input",
+      "error_message": "Unable to find button \"Collect System Data\" (Capybara::ElementNotFound)"
+    },
+    "n": 2
+  },
+  {
+    "failure": {
+      "feature": "/Users/sgonzalez/rapid7/pro/ui/features/sessions/session_collect.feature",
+      "scenario": "Scenario: Collect Data from a Session",
+      "step": "And I click on the \"Collect\" link",
+      "error_message": "Unable to find link or button \"Collect\" (Capybara::ElementNotFound)"
+    },
+    "n": 2
+  },
+  {
+    "failure": {
+      "feature": "/Users/sgonzalez/rapid7/pro/ui/features/single_vuln_view/related_hosts_tab.feature",
+      "scenario": "Scenario: Related Hosts Table Data",
+      "step": "Then I should see the \".loaded\" table[\"1\"] that contains:",
+      "error_message": "Tables were not identical:"
+    },
+    "n": 1
+  }
+]

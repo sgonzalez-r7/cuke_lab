@@ -1,0 +1,54 @@
+#!/usr/bin/env ruby
+$LOAD_PATH.unshift( File.expand_path('../../lib', __FILE__) )
+require 'awesome_print'
+require 'cuke_lab'
+require 'thor'
+
+class Run < Thor
+  desc 'analysis NAME', 'Prints failure distribution for lab NAME'
+  def analysis(name)
+    CukeLab.run_analysis(name: name)
+  end
+
+  desc 'repeat', 'Repeats cucumber for lab NAME'
+  method_option :name,
+                type: :string,
+            required: true,
+                desc: 'lab name'
+
+  method_option :features,
+                type: :array,
+            required: true,
+                desc: 'a list of features'
+
+  method_option :n,
+                type: :numeric,
+             default: 1,
+                desc: 'number of iterations'
+
+  method_option :cuke_opts,
+                type: :string,
+             default: '',
+                desc: 'cucumber options, e.g. --tags @focus'
+
+  method_option :dry_run,
+                type: :boolean,
+             default: false,
+                desc: 'Does not run cucumber'
+
+  def repeat
+    CukeLab.run_experiment(features: options[:features],
+                               name: options[:name],
+                          cuke_opts: options[:cuke_opts],
+                                  n: options[:n],
+                            dry_run: options[:dry_run])
+  end
+
+  desc 'prepare NAME', 'Prepares directory structure for lab NAME'
+  def prepare(name)
+    CukeLab.run_preparation(name: name)
+  end
+end
+
+
+Run.start

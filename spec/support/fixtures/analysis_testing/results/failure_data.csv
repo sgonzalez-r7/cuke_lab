@@ -1,0 +1,4 @@
+/Users/sgonzalez/rapid7/pro/ui/features/sessions/session_collect.feature,Scenario: Collect Data from a Session,When I click on the first Active Session link,"Unable to find css ""#active_sessions"" (Capybara::ElementNotFound)",1,5
+/Users/sgonzalez/rapid7/pro/ui/features/sessions/session_collect.feature,Scenario: Collect Data from a Session,"When I click the ""Collect System Data"" button to submit input","Unable to find button ""Collect System Data"" (Capybara::ElementNotFound)",2,2
+/Users/sgonzalez/rapid7/pro/ui/features/sessions/session_collect.feature,Scenario: Collect Data from a Session,"And I click on the ""Collect"" link","Unable to find link or button ""Collect"" (Capybara::ElementNotFound)",3,2
+/Users/sgonzalez/rapid7/pro/ui/features/single_vuln_view/related_hosts_tab.feature,Scenario: Related Hosts Table Data,"Then I should see the "".loaded"" table[""1""] that contains:",Tables were not identical:,4,1
