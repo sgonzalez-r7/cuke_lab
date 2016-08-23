@@ -99,7 +99,7 @@ private
   end
 
   def write_csv
-    file = File.join(results_dir, 'distribution.csv')
+    file = File.join(results_dir, 'failure_data.csv')
     i = 0
     CSV.open(file, 'w') do |csv|
       distribution.each do |p|
